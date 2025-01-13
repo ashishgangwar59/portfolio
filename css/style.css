@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f3;
+  color: #333;
+  line-height: 1.6; /* Improve text readability */
+}
+
+nav {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Vertically align items */
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+}
+
+.bio-graphy {
+  padding: 100px 20px;
+  background-color: #fff;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.hero img {
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+.rn-service {
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+  text-align: left;
+  padding: 35px 50px 35px 50px;
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  border-radius: 10px;
+  /* background: var(--background-color-1);
+  box-shadow: var(--shadow-1); */
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
