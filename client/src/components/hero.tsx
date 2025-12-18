@@ -5,6 +5,7 @@ import profileImg from "@assets/generated_images/professional_portrait_of_develo
 import TypingName from "./typing-name";
 import TechIcons from "./tech-icons";
 import AnimatedBackground from "./animated-background";
+import ThemeToggle from "./theme-toggle";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -32,6 +33,11 @@ export default function Hero() {
 
       <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
         <AnimatedBackground />
+
+        {/* Theme Toggle - Top Right */}
+        <div className="absolute top-8 right-8 z-40">
+          <ThemeToggle />
+        </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
