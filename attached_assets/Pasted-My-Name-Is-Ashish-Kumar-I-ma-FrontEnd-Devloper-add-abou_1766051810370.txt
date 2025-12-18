@@ -1,0 +1,165 @@
+My Name Is Ashish Kumar
+I ma FrontEnd Devloper 
+add about my self best line
+
+SKILLS
+
+React.js
+Hands on React Native
+Next.js
+Redux
+Material UI
+Bootstrap/Tailwind CSS
+TypeScript
+JavaScript (ES6+)
+HTML5
+CSS3
+Sass/SCSS
+Microsoft Azure
+GIT
+Docker
+Nginx
+AWS
+Nginx
+Agile
+CI/CD
+Time Management
+Teamwork
+
+WORK EXPERIENCE
+E2E Research Pvt Ltd
+Worked on multi projects developed from scratch with end‑to‑end responsibility of frontend and backend architecture
+and development workflows under agile methodology.
+• Involved in developing, building logics and training juniors on live project to accomplish bussiness usecase.
+• Worked closely with the COO of the company to discover scenarios and deliver expected results.
+• Received two awards within 6 months for my consistent performance.
+• Skills: ReactJs, NextJS, NodeJs, ExpressJs, Mongodb, NestJS, Docker, Nginx, etc.
+
+i have done these project 
+1.Probeme AI
+	1. Professional Summary / Objective
+
+Key points your chatbot should suggest:
+
+Highlight current experience and expertise in modern front-end frameworks.
+
+Emphasize results and impact, not just tasks.
+
+Mention career goals aligned with the role.
+
+Example suggestions:
+
+“Front-end developer with 4+ years experience building responsive and high-performance web applications using React and TypeScript.”
+
+“Skilled in translating design prototypes into functional, accessible, and optimized web interfaces.”
+
+“Passionate about improving user experience and collaborating on cross-functional teams to deliver scalable solutions.”
+2. Technical Skills / Tools
+
+The chatbot should help the user list up-to-date technologies, focusing on in-demand skills:
+
+Categories & Examples:
+
+Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS
+
+Frameworks/Libraries: React, Next.js, Vue 3, Svelte, Tailwind CSS
+
+State Management: Redux, Zustand, Pinia, Context API
+
+Testing: Jest, Cypress, React Testing Library
+
+APIs: REST, GraphQL
+
+Build/Tools: Webpack, Vite, npm/yarn, Git/GitHub
+
+Performance/Optimization: Lighthouse, Core Web Vitals, lazy loading, code splitting
+
+Your chatbot should suggest action-oriented, result-focused bullet points. Examples:
+
+Front-End Developer Key Points:
+
+Developed responsive web applications using React and Tailwind, improving load speed by 30%.
+
+Integrated GraphQL and REST APIs to deliver dynamic content efficiently.
+
+Optimized website performance using lazy loading, code splitting, and caching strategies.
+
+Collaborated with UX/UI designers to implement a consistent design system across multiple projects.
+
+Implemented unit and integration tests using Jest and Cypress to ensure code quality.
+
+Mentored junior developers, providing code reviews and best practice guidance.
+
+Migrated legacy projects to modern frameworks (React 18 / Next.js), improving maintainability.
+
+Built Progressive Web Apps (PWAs) to enhance offline accessibility and mobile experience.
+2.Research Gearbox ‑ Video Analyzer
+A fully customized video analysis tool along with data capture and data analysis using complex mathematical computations.
+Once integrated, the tool can capture data from multiple survey platforms and data will be reflected into the dashboard in real‑ time.
+The dashboard is managed with admin and user login. Each dashboard route and API endpoint is secured with appropriate access token and
+refresh token usage.
+I was responsible for the complete management, development and deployment of the extensive dashboard along with training fresh interns
+on live project.
+
+2.Raven Dashboard
+Raven Dashboard is a powerful tool designed to meet the complex data monitoring and analysis needs of modern enterprises. By
+providing real-time insights, customizable reports, and robust data integration capabilities, it empowers businesses to make informed
+decisions, improve operational efficiency, and achieve strategic objectives. With its advanced features and user-friendly interface,
+Raven Dashboard is an essential asset for any data-driven organization.
+Real-Time Data Monitoring
+Live Data Updates: Continuously updated data feeds to provide the latest information.
+Custom Alerts: Users can set up notifications for specific events or thresholds to facilitate proactive management.
+Interactive Data Visualization
+Dynamic Charts and Graphs: Offers a variety of visualization tools, including line graphs, bar charts, pie charts, and heatmaps.
+Customizable Dashboards: Allows users to create personalized dashboards tailored to their specific needs and preferences.
+Data Integration
+API Connectivity: Seamless integration with various data sources through APIs, ensuring a unified data stream.
+Database Support: Compatible with major databases Mongo DB.
+Raven is a SaaS that provides data visualization for the survey data. It takes survey data from different survey tools like
+Confirmit, Decipher, etc., and provides the data visualization in the form of user- friendly charts, PPT, and excel sheets
+Technologies Used:-
+Frontend: React.js, Highcharts, pptgen,js pdf,excel js for creating interactive and dynamic user interfaces.
+Backend: Nest js, Express.js for robust and scalable backend services.
+Database: MongoDB for efficient data storage and management.
+Security: JWT for authentication, SSL/TLS for secure data transmission and storage.
+
+3.HFS Dashboard
+HFS Dashboard is a sophisticated tool designed for organizations seeking advanced data visualization and
+performance tracking solutions. HFS (High-Frequency Statistics) Dashboard provides a comprehensive view of key
+metrics, enabling users to monitor, analyze, and optimize various aspects of their operations. This dashboard is
+particularly useful in environments where real-time data and actionable insights are critical for decision-making.
+Key Features:
+Real-Time Data Visualization
+Live Data Streams: Continuously updated data feeds to ensure up-to-the-minute accuracy.
+Interactive Charts: A range of visualization options including line charts, bar graphs, scatter plots, and heatmaps.
+Advanced Analytics
+Predictive Analytics: Utilize historical data and advanced algorithms to forecast trends and potential issues.
+Data Aggregation: Combine data from multiple sources to provide a holistic view of performance metrics.
+Marketing and Sales
+Analyze sales performance and marketing campaign effectiveness.
+Monitor customer acquisition and retention metrics.
+
+Technologies Used:-
+Frontend: Utilizes modern JavaScript frameworks such as React.js for a responsive and interactive user interface.
+Backend: Built with Node.js for robust and scalable server-side operations.
+Database: Integration with relational and Mongo DB databases for comprehensive data management.
+Data Visualization: Uses libraries such as Highcharts creating dynamic and informative visualizations.
+Security: Implements SSL/TLS for secure data transmission and employs encryption techniques for data protection
+Restaurant Brands International (RBI) Jan 2024 - June 2024
+The Restaurant Brands International (RBI) Dashboard is a comprehensive analytics and management tool designed for
+one of the world's largest quick-service restaurant companies. RBI oversees brands such as Burger King, Tim Hortons,
+and Popeyes, requiring robust data integration, real-time monitoring, and detailed reporting capabilities. The dashboard
+provides centralized control over various aspects of restaurant operations, from sales and marketing to supply chain
+management and customer satisfaction.
+
+4.Restaurant Brands International (RBI) Jan 2024 - June 2024
+The Restaurant Brands International (RBI) Dashboard is a comprehensive analytics and management tool designed for
+one of the world's largest quick-service restaurant companies. RBI oversees brands such as Burger King, Tim Hortons,
+and Popeyes, requiring robust data integration, real-time monitoring, and detailed reporting capabilities. The dashboard
+provides centralized control over various aspects of restaurant operations, from sales and marketing to supply chain
+management and customer satisfaction.
+
+5.CCAdmin Dashboard April 2020 - Nov 2021
+Survey Admin Dashboard
+Teamed on user-centric design strategy in the translation of UX and business requirements into coded solutions.
+Generate detailed reports on cloud resource usage, performance, and costs.

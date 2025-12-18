@@ -14,33 +14,49 @@ export default function Contact() {
             LET'S WORK <br /> TOGETHER
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Have a project in mind? I'm currently available for freelance work and open to new opportunities.
+            Have a project in mind? I'm currently available for freelance work and open to new opportunities in frontend development and dashboard architecture.
           </p>
           
           <motion.a
-            href="mailto:hello@example.com"
+            href="mailto:ashishkumar@example.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-bold text-lg rounded-full hover:bg-primary/90 transition-colors mb-20"
+            data-testid="link-email"
           >
             <Mail className="w-5 h-5" />
-            hello@example.com
+            ashishkumar@example.com
           </motion.a>
 
           <div className="flex justify-center gap-8">
-            <a href="#" className="text-muted-foreground hover:text-white transition-colors">
+            <a 
+              href="#" 
+              className="text-muted-foreground hover:text-white transition-colors"
+              data-testid="link-github"
+              aria-label="GitHub"
+            >
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-white transition-colors">
+            <a 
+              href="#" 
+              className="text-muted-foreground hover:text-white transition-colors"
+              data-testid="link-twitter"
+              aria-label="Twitter"
+            >
               <Twitter className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-white transition-colors">
+            <a 
+              href="#" 
+              className="text-muted-foreground hover:text-white transition-colors"
+              data-testid="link-linkedin"
+              aria-label="LinkedIn"
+            >
               <Linkedin className="w-6 h-6" />
             </a>
           </div>
 
           <div className="mt-20 text-sm text-muted-foreground/40">
-            © 2024 Portfolio. Crafted with passion.
+            © 2024 Ashish Kumar. Crafted with passion for frontend excellence.
           </div>
         </motion.div>
       </div>
