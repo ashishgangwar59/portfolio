@@ -218,9 +218,32 @@ export default function About() {
                       {/* Icon */}
                       <motion.div
                         className="inline-block p-3 rounded-lg bg-background/50 border border-white/10 mb-4"
-                        whileHover={{ scale: 1.15, rotate: 10 }}
+                        whileHover={{ scale: 1.15, rotate: 15 }}
+                        animate={{ 
+                          y: [0, -8, 0],
+                        }}
+                        transition={{ 
+                          duration: 3, 
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
                       >
-                        <Icon className="w-6 h-6 text-primary" />
+                        <motion.div
+                          animate={{ 
+                            rotate: [0, 360],
+                            textShadow: [
+                              "0 0 10px rgba(59, 130, 246, 0.3)",
+                              "0 0 20px rgba(59, 130, 246, 0.6)",
+                              "0 0 10px rgba(59, 130, 246, 0.3)",
+                            ]
+                          }}
+                          transition={{ 
+                            rotate: { duration: 8, repeat: Infinity },
+                            textShadow: { duration: 2, repeat: Infinity }
+                          }}
+                        >
+                          <Icon className="w-6 h-6 text-primary" />
+                        </motion.div>
                       </motion.div>
 
                       {/* Category Title */}

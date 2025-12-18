@@ -51,28 +51,47 @@ export default function Hero() {
             >
               <div className="space-y-6">
                 <div>
-                  <motion.p
+                  <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-xl text-primary font-bold tracking-wide mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
                   >
-                    Front End Developer
-                  </motion.p>
-                  <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 }}
-                    className="text-6xl md:text-8xl font-bold leading-tight text-foreground"
+                    <motion.p
+                      className="text-xl text-primary font-bold tracking-wide mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+                      animate={{ 
+                        boxShadow: [
+                          "0 0 10px rgba(59, 130, 246, 0.3)",
+                          "0 0 20px rgba(59, 130, 246, 0.6)",
+                          "0 0 10px rgba(59, 130, 246, 0.3)",
+                        ]
+                      }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      Front End Developer
+                    </motion.p>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
                   >
-                    <TypingName />
-                  </motion.h1>
+                    <motion.h1
+                      className="text-6xl md:text-8xl font-bold leading-tight text-foreground"
+                      animate={{ 
+                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                      }}
+                      transition={{ duration: 8, repeat: Infinity }}
+                    >
+                      <TypingName />
+                    </motion.h1>
+                  </motion.div>
                 </div>
 
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
+                  transition={{ delay: 1 }}
                   className="text-lg text-muted-foreground leading-relaxed max-w-md"
                 >
                   Building responsive, high-performance web applications with modern frameworks and best practices.
