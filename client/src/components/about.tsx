@@ -265,8 +265,8 @@ export default function About() {
           >
             {[
               { label: "Years Experience", value: "6+" },
-              { label: "Projects Completed", value: "20+" },
-              { label: "Technologies Used", value: "30+" },
+              { label: "Projects Completed", value: "5+" },
+              { label: "Technologies Used", value: "5+" },
             ].map((stat, idx) => (
               <motion.div
                 key={idx}
