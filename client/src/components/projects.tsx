@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { useLocation } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import ProjectCard from "./project-card";
 import dashboardImg from "@assets/generated_images/dashboard_ui_mockup.png";
 import reactImg from "@assets/generated_images/react_application_interface.png";
 
@@ -13,7 +12,8 @@ const projects = [
     description: "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
     image: dashboardImg,
     tags: ["React.js", "TypeScript", "Real-time Data"],
-    year: "Jan 2024 - June 2024"
+    year: "Jan 2024 - June 2024",
+    featured: true,
   },
   {
     id: "raven-dashboard",
@@ -21,7 +21,8 @@ const projects = [
     category: "Data Visualization SaaS",
     description: "Enterprise data visualization platform processing survey data from Confirmit and Decipher, delivering real-time insights through interactive charts.",
     image: reactImg,
-    tags: ["React.js", "Highcharts", "NestJS"]
+    tags: ["React.js", "Highcharts", "NestJS"],
+    featured: true,
   },
   {
     id: "hfs-dashboard",
@@ -29,163 +30,106 @@ const projects = [
     category: "Performance Analytics",
     description: "High-Frequency Statistics dashboard with predictive analytics, live data streams, and advanced performance tracking for enterprise operations.",
     image: dashboardImg,
-    tags: ["React.js", "Node.js", "Highcharts"]
+    tags: ["React.js", "Node.js", "Highcharts"],
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15,
-    },
-  },
-};
-
 export default function Projects() {
-  const [, setLocation] = useLocation();
-
   return (
     <section id="projects" className="py-32 px-6 bg-background relative overflow-hidden">
-      {/* Background decoration */}
+      {/* Animated background shapes */}
       <motion.div
-        className="absolute -top-40 right-0 w-80 h-80 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-full blur-3xl"
-        animate={{ y: [0, 30, 0] }}
-        transition={{ duration: 8, repeat: Infinity }}
+        className="absolute -top-40 right-0 w-80 h-80 bg-gradient-to-br from-primary/15 to-purple-500/15 rounded-full blur-3xl"
+        animate={{ y: [0, 40, 0], x: [0, 20, 0] }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute -bottom-32 left-1/2 w-96 h-96 bg-gradient-to-tr from-cyan-500/10 to-primary/10 rounded-full blur-3xl"
+        animate={{ y: [0, -40, 0], x: [0, -20, 0] }}
+        transition={{ duration: 12, repeat: Infinity, delay: 2 }}
       />
 
       <div className="container mx-auto max-w-6xl relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-24 text-center md:text-left"
         >
-          <motion.h2 
-            className="text-5xl md:text-6xl font-light tracking-tight mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent"
+          <motion.div
+            className="inline-block mb-6"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="text-sm text-primary font-bold uppercase tracking-widest px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              ✨ Featured Work
+            </span>
+          </motion.div>
+
+          <motion.h2
+            className="text-6xl md:text-7xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Some of my latest work
+            <span className="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+              Some of my
+            </span>
+            <br />
+            <span className="text-foreground">latest work</span>
           </motion.h2>
-          <motion.p 
-            className="text-lg text-muted-foreground"
+
+          <motion.p
+            className="text-xl text-muted-foreground max-w-2xl mt-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            A selection of projects showcasing my expertise in frontend development and dashboard architecture.
+            A curated selection of projects that showcase my expertise in building scalable, 
+            performant web applications and comprehensive data visualization solutions.
           </motion.p>
         </motion.div>
 
+        {/* Projects Grid */}
         <motion.div
           className="grid gap-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          {projects.map((project, idx) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              data-testid={`card-project-${project.id}`}
-              onClick={() => setLocation(`/project/${project.id}`)}
-              className="cursor-pointer"
-            >
-              <Card className="border-0 shadow-none bg-transparent group hover:bg-secondary/30 transition-all duration-300 rounded-2xl p-6">
-                <CardContent className="p-0 grid md:grid-cols-2 gap-12 items-center">
-                  <motion.div
-                    whileHover={{ scale: 1.05, rotate: 2 }}
-                    transition={{ duration: 0.4 }}
-                    className="overflow-hidden rounded-2xl relative"
-                  >
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-2xl"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                    />
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-auto object-cover"
-                    />
-                  </motion.div>
-
-                  <div className="space-y-6">
-                    <div>
-                      <motion.span 
-                        className="text-sm text-primary font-bold uppercase tracking-widest inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20"
-                        data-testid={`badge-category-${project.id}`}
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        {project.category}
-                      </motion.span>
-                      {project.year && (
-                        <span className="text-sm text-muted-foreground ml-4">
-                          {project.year}
-                        </span>
-                      )}
-                      <motion.h3 
-                        className="text-3xl font-bold mt-3 mb-4 group-hover:text-primary transition-colors"
-                        data-testid={`heading-project-${project.id}`}
-                        whileHover={{ x: 10 }}
-                      >
-                        {project.title}
-                      </motion.h3>
-                      <motion.p 
-                        className="text-lg text-muted-foreground leading-relaxed"
-                        data-testid={`description-project-${project.id}`}
-                        initial={{ opacity: 0.7 }}
-                        whileHover={{ opacity: 1 }}
-                      >
-                        {project.description}
-                      </motion.p>
-                    </div>
-
-                    <div className="flex items-center justify-between pt-4">
-                      <div className="flex gap-3 flex-wrap">
-                        {project.tags.map((tag) => (
-                          <motion.span 
-                            key={tag}
-                            className="text-sm text-muted-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all"
-                            data-testid={`tag-${tag.toLowerCase().replace(/[\s.]/g, '-')}`}
-                            whileHover={{ scale: 1.1 }}
-                          >
-                            {tag}
-                          </motion.span>
-                        ))}
-                      </div>
-                      <motion.div
-                        whileHover={{ x: 8, y: -8, rotate: 45 }}
-                        className="text-primary"
-                      >
-                        <ArrowUpRight className="w-6 h-6" />
-                      </motion.div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
           ))}
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="mt-24 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          <motion.button
+            className="group relative px-8 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-primary/20 to-purple-500/20 border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-purple-500 hover:text-white transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10">View All Projects</span>
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full"
+              animate={{
+                x: ["-100%", "100%"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 2,
+              }}
+            />
+          </motion.button>
         </motion.div>
       </div>
     </section>
