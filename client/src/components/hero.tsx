@@ -44,22 +44,22 @@ export default function Hero() {
             >
               <div className="space-y-6">
                 <div>
-                  <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                    className="text-6xl md:text-7xl font-bold leading-tight mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
-                  >
-                    <TypingName />
-                  </motion.h1>
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6 }}
-                    className="text-xl text-primary font-medium tracking-wide"
+                    transition={{ delay: 0.2 }}
+                    className="text-xl text-primary font-medium tracking-wide mb-4"
                   >
                     Front End Developer
                   </motion.p>
+                  <motion.h1
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="text-6xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                  >
+                    <TypingName />
+                  </motion.h1>
                 </div>
 
                 <motion.p
