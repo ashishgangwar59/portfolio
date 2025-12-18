@@ -6,6 +6,7 @@ import TypingName from "./typing-name";
 import TechIcons from "./tech-icons";
 import AnimatedBackground from "./animated-background";
 import ThemeToggle from "./theme-toggle";
+import AnimatedButton from "./animated-button";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -51,10 +52,10 @@ export default function Hero() {
               <div className="space-y-6">
                 <div>
                   <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-xl text-primary font-medium tracking-wide mb-4"
+                    className="text-xl text-primary font-bold tracking-wide mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
                   >
                     Front End Developer
                   </motion.p>
@@ -62,15 +63,15 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="text-6xl md:text-7xl font-bold leading-tight text-foreground"
+                    className="text-6xl md:text-8xl font-bold leading-tight text-foreground"
                   >
                     <TypingName />
                   </motion.h1>
                 </div>
 
                 <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                   className="text-lg text-muted-foreground leading-relaxed max-w-md"
                 >
@@ -81,23 +82,18 @@ export default function Hero() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1 }}
-                  className="pt-4 flex gap-6"
+                  className="pt-4 flex gap-6 flex-wrap"
                 >
                   <Link href="#projects">
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="text-primary hover:text-primary/70 font-medium transition-colors px-6 py-3 border border-primary rounded-lg"
-                      data-testid="link-portfolio"
-                    >
+                    <AnimatedButton variant="primary">
                       View Portfolio →
-                    </motion.a>
+                    </AnimatedButton>
                   </Link>
                   <motion.a
                     href="#contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-muted-foreground hover:text-foreground transition-colors px-6 py-3 border border-border rounded-lg"
+                    className="text-muted-foreground hover:text-foreground transition-colors px-6 py-3 border border-border rounded-full"
                     data-testid="link-contact-hero"
                   >
                     Contact
@@ -126,13 +122,13 @@ export default function Hero() {
 
               {/* Profile Image */}
               <motion.div
-                className="w-full max-w-sm rounded-lg overflow-hidden"
+                className="w-full max-w-sm rounded-xl overflow-hidden relative"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative">
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-xl"
                     animate={{
                       opacity: [0.3, 0.6, 0.3],
                     }}
@@ -142,10 +138,24 @@ export default function Hero() {
                       ease: "easeInOut",
                     }}
                   />
+                  <motion.div
+                    className="absolute inset-0 rounded-xl border-2 border-gradient-to-r from-primary via-purple-400 to-cyan-400"
+                    animate={{
+                      boxShadow: [
+                        "0 0 20px rgba(59, 130, 246, 0.3)",
+                        "0 0 40px rgba(168, 85, 247, 0.5)",
+                        "0 0 20px rgba(59, 130, 246, 0.3)",
+                      ],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                    }}
+                  />
                   <img
                     src={profileImg}
                     alt="Ashish Kumar"
-                    className="w-full h-auto object-cover relative z-10"
+                    className="w-full h-auto object-cover relative z-10 rounded-xl"
                   />
                 </div>
               </motion.div>

@@ -46,16 +46,15 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: (index?: number) => ({
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
       type: "spring" as const,
       stiffness: 100,
       damping: 15,
-      delay: (index || 0) * 0.2,
     },
-  }),
+  },
 };
 
 export default function Projects() {
@@ -79,7 +78,7 @@ export default function Projects() {
           className="mb-20"
         >
           <motion.h2 
-            className="text-5xl md:text-6xl font-light tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl font-light tracking-tight mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -104,7 +103,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
@@ -112,10 +111,10 @@ export default function Projects() {
               onClick={() => setLocation(`/project/${project.id}`)}
               className="cursor-pointer"
             >
-              <Card className="border-0 shadow-none bg-transparent group">
+              <Card className="border-0 shadow-none bg-transparent group hover:bg-secondary/30 transition-all duration-300 rounded-2xl p-6">
                 <CardContent className="p-0 grid md:grid-cols-2 gap-12 items-center">
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.05, rotate: 2 }}
                     transition={{ duration: 0.4 }}
                     className="overflow-hidden rounded-2xl relative"
                   >
@@ -134,7 +133,7 @@ export default function Projects() {
                   <div className="space-y-6">
                     <div>
                       <motion.span 
-                        className="text-sm text-primary font-medium uppercase tracking-widest"
+                        className="text-sm text-primary font-bold uppercase tracking-widest inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20"
                         data-testid={`badge-category-${project.id}`}
                         whileHover={{ scale: 1.05 }}
                       >
@@ -146,7 +145,7 @@ export default function Projects() {
                         </span>
                       )}
                       <motion.h3 
-                        className="text-3xl font-light mt-3 mb-4 group-hover:text-primary transition-colors"
+                        className="text-3xl font-bold mt-3 mb-4 group-hover:text-primary transition-colors"
                         data-testid={`heading-project-${project.id}`}
                         whileHover={{ x: 10 }}
                       >
@@ -164,21 +163,19 @@ export default function Projects() {
 
                     <div className="flex items-center justify-between pt-4">
                       <div className="flex gap-3 flex-wrap">
-                        {project.tags.map((tag, idx) => (
+                        {project.tags.map((tag) => (
                           <motion.span 
                             key={tag}
-                            className="text-sm text-muted-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors"
+                            className="text-sm text-muted-foreground border border-border rounded-full px-4 py-2 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all"
                             data-testid={`tag-${tag.toLowerCase().replace(/[\s.]/g, '-')}`}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: idx * 0.05 }}
+                            whileHover={{ scale: 1.1 }}
                           >
                             {tag}
                           </motion.span>
                         ))}
                       </div>
                       <motion.div
-                        whileHover={{ x: 8, y: -8 }}
+                        whileHover={{ x: 8, y: -8, rotate: 45 }}
                         className="text-primary"
                       >
                         <ArrowUpRight className="w-6 h-6" />
