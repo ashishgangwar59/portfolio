@@ -112,10 +112,12 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <motion.button
-            className="group relative px-8 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-primary/20 to-purple-500/20 border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-purple-500 hover:text-white transition-all duration-300"
+          <motion.a
+            href="#projects"
+            className="group relative inline-block px-8 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-primary/20 to-purple-500/20 border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-purple-500 hover:text-white transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            data-testid="button-view-all-projects"
           >
             <span className="relative z-10">View All Projects</span>
             <motion.span
@@ -129,7 +131,7 @@ export default function Projects() {
                 repeatDelay: 2,
               }}
             />
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

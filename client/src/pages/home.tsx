@@ -5,6 +5,7 @@ import FloatingShapes from "@/components/floating-shapes";
 import AnimatedTechStack from "@/components/animated-tech-stack";
 import Projects from "@/components/projects";
 import Experience from "@/components/experience";
+import Education from "@/components/education";
 import About from "@/components/about";
 import Contact from "@/components/contact";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <AnimatedTechStack />
       <Projects />
       <Experience />
+      <Education />
       <About />
       <Contact />
     </main>
