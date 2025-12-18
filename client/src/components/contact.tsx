@@ -1,62 +1,67 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Twitter, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 bg-background border-t border-white/5">
-      <div className="container mx-auto text-center">
+    <section id="contact" className="py-32 px-6 bg-background border-t border-border">
+      <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
-            LET'S WORK <br /> TOGETHER
+          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-12">
+            Let's work together
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Have a project in mind? I'm currently available for freelance work and open to new opportunities in frontend development and dashboard architecture.
-          </p>
-          
-          <motion.a
-            href="mailto:ashishkumar@example.com"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-bold text-lg rounded-full hover:bg-primary/90 transition-colors mb-20"
-            data-testid="link-email"
-          >
-            <Mail className="w-5 h-5" />
-            ashishkumar@example.com
-          </motion.a>
 
-          <div className="flex justify-center gap-8">
-            <a 
-              href="#" 
-              className="text-muted-foreground hover:text-white transition-colors"
-              data-testid="link-github"
-              aria-label="GitHub"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a 
-              href="#" 
-              className="text-muted-foreground hover:text-white transition-colors"
-              data-testid="link-twitter"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-6 h-6" />
-            </a>
-            <a 
-              href="#" 
-              className="text-muted-foreground hover:text-white transition-colors"
-              data-testid="link-linkedin"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
+          <div className="grid md:grid-cols-2 gap-16 mb-20">
+            <div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I'm currently available for freelance work and open to new opportunities. Whether you need a frontend developer for your next project or want to collaborate on something creative, I'd love to hear from you.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <motion.a
+                href="mailto:ashishkumar@example.com"
+                whileHover={{ x: 8 }}
+                className="flex items-center gap-4 group"
+                data-testid="link-email-contact"
+              >
+                <Mail className="w-6 h-6 text-primary" />
+                <span className="text-lg text-foreground group-hover:text-primary transition-colors">
+                  ashishkumar@example.com
+                </span>
+              </motion.a>
+
+              <motion.a
+                href="#"
+                whileHover={{ x: 8 }}
+                className="flex items-center gap-4 group"
+                data-testid="link-github-contact"
+              >
+                <Github className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="text-lg text-foreground group-hover:text-primary transition-colors">
+                  GitHub
+                </span>
+              </motion.a>
+
+              <motion.a
+                href="#"
+                whileHover={{ x: 8 }}
+                className="flex items-center gap-4 group"
+                data-testid="link-linkedin-contact"
+              >
+                <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                <span className="text-lg text-foreground group-hover:text-primary transition-colors">
+                  LinkedIn
+                </span>
+              </motion.a>
+            </div>
           </div>
 
-          <div className="mt-20 text-sm text-muted-foreground/40">
-            © 2024 Ashish Kumar. Crafted with passion for frontend excellence.
+          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+            © 2024 Ashish Kumar. Designed and developed with care.
           </div>
         </motion.div>
       </div>
