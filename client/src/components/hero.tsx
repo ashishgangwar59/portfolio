@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import profileImg from "@assets/generated_images/professional_portrait_of_developer.png";
 import TypingName from "./typing-name";
+import TechIcons from "./tech-icons";
+import AnimatedBackground from "./animated-background";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -22,14 +24,16 @@ export default function Hero() {
       {/* Custom Cursor */}
       {isHovering && (
         <motion.div
-          className="fixed w-8 h-8 bg-primary rounded-full pointer-events-none mix-blend-screen z-50"
+          className="fixed w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full pointer-events-none mix-blend-screen z-50 shadow-lg"
           animate={{ x: mousePosition.x - 16, y: mousePosition.y - 16 }}
           transition={{ type: "spring", stiffness: 500, damping: 28 }}
         />
       )}
 
-      <section className="min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <AnimatedBackground />
+
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -44,7 +48,7 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-6xl md:text-7xl font-bold leading-tight mb-4"
+                    className="text-6xl md:text-7xl font-bold leading-tight mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
                   >
                     <TypingName />
                   </motion.h1>
@@ -100,17 +104,45 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden md:flex justify-center"
+              className="hidden md:flex flex-col justify-center items-center gap-8"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <div className="w-full max-w-sm rounded-lg overflow-hidden">
-                <img
-                  src={profileImg}
-                  alt="Ashish Kumar"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+              {/* Tech Icons Above Image */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="w-full"
+              >
+                <TechIcons />
+              </motion.div>
+
+              {/* Profile Image */}
+              <motion.div
+                className="w-full max-w-sm rounded-lg overflow-hidden"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="relative">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg"
+                    animate={{
+                      opacity: [0.3, 0.6, 0.3],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <img
+                    src={profileImg}
+                    alt="Ashish Kumar"
+                    className="w-full h-auto object-cover relative z-10"
+                  />
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
