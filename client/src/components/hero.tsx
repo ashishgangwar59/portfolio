@@ -56,7 +56,7 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="text-6xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                    className="text-6xl md:text-7xl font-bold leading-tight text-foreground"
                   >
                     <TypingName />
                   </motion.h1>
