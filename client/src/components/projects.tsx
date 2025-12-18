@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import dashboardImg from "@assets/generated_images/dashboard_ui_mockup.png";
 import reactImg from "@assets/generated_images/react_application_interface.png";
 
 const projects = [
   {
-    id: 1,
+    id: "rbi-dashboard",
     title: "Restaurant Brands International Dashboard",
     category: "Analytics Platform",
     description: "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
     image: dashboardImg,
-    tags: ["React.js", "TypeScript", "Real-time Data"]
+    tags: ["React.js", "TypeScript", "Real-time Data"],
+    year: "Jan 2024 - June 2024"
   },
   {
-    id: 2,
+    id: "raven-dashboard",
     title: "Raven Dashboard",
     category: "Data Visualization SaaS",
     description: "Enterprise data visualization platform processing survey data from Confirmit and Decipher, delivering real-time insights through interactive charts.",
@@ -21,7 +23,7 @@ const projects = [
     tags: ["React.js", "Highcharts", "NestJS"]
   },
   {
-    id: 3,
+    id: "hfs-dashboard",
     title: "HFS Dashboard",
     category: "Performance Analytics",
     description: "High-Frequency Statistics dashboard with predictive analytics, live data streams, and advanced performance tracking for enterprise operations.",
@@ -31,6 +33,8 @@ const projects = [
 ];
 
 export default function Projects() {
+  const [, setLocation] = useLocation();
+
   return (
     <section id="projects" className="py-32 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -58,8 +62,11 @@ export default function Projects() {
               transition={{ delay: index * 0.1 }}
               data-testid={`card-project-${project.id}`}
             >
-              <Card className="border-0 shadow-none bg-transparent">
-                <CardContent className="p-0 grid md:grid-cols-2 gap-12 items-center">
+              <Card className="border-0 shadow-none bg-transparent cursor-pointer group">
+                <CardContent 
+                  className="p-0 grid md:grid-cols-2 gap-12 items-center"
+                  onClick={() => setLocation(`/project/${project.id}`)}
+                >
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
@@ -77,7 +84,12 @@ export default function Projects() {
                       <span className="text-sm text-primary font-medium uppercase tracking-wider" data-testid={`badge-category-${project.id}`}>
                         {project.category}
                       </span>
-                      <h3 className="text-3xl font-light mt-3 mb-4" data-testid={`heading-project-${project.id}`}>
+                      {project.year && (
+                        <span className="text-sm text-muted-foreground ml-4">
+                          {project.year}
+                        </span>
+                      )}
+                      <h3 className="text-3xl font-light mt-3 mb-4 group-hover:text-primary transition-colors" data-testid={`heading-project-${project.id}`}>
                         {project.title}
                       </h3>
                       <p className="text-lg text-muted-foreground leading-relaxed" data-testid={`description-project-${project.id}`}>
@@ -85,16 +97,24 @@ export default function Projects() {
                       </p>
                     </div>
 
-                    <div className="flex gap-3 flex-wrap pt-4">
-                      {project.tags.map(tag => (
-                        <span 
-                          key={tag} 
-                          className="text-sm text-muted-foreground border border-border rounded-full px-4 py-2"
-                          data-testid={`tag-${tag.toLowerCase().replace(/[\s.]/g, '-')}`}
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="flex items-center justify-between pt-4">
+                      <div className="flex gap-3 flex-wrap">
+                        {project.tags.map(tag => (
+                          <span 
+                            key={tag} 
+                            className="text-sm text-muted-foreground border border-border rounded-full px-4 py-2"
+                            data-testid={`tag-${tag.toLowerCase().replace(/[\s.]/g, '-')}`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <motion.div
+                        whileHover={{ x: 4 }}
+                        className="text-primary font-medium"
+                      >
+                        View Details →
+                      </motion.div>
                     </div>
                   </div>
                 </CardContent>
