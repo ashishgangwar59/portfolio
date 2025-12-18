@@ -1,0 +1,56 @@
+1.Probeme AI
+Professional Summary / Objective
+Key points your chatbot should suggest:
+
+Highlight current experience and expertise in modern front-end frameworks.
+
+Emphasize results and impact, not just tasks.
+
+Mention career goals aligned with the role.
+
+Example suggestions:
+
+“Front-end developer with 4+ years experience building responsive and high-performance web applications using React and TypeScript.”
+
+“Skilled in translating design prototypes into functional, accessible, and optimized web interfaces.”
+
+“Passionate about improving user experience and collaborating on cross-functional teams to deliver scalable solutions.”
+2. Technical Skills / Tools
+
+The chatbot should help the user list up-to-date technologies, focusing on in-demand skills:
+
+Categories & Examples:
+
+Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS
+
+Frameworks/Libraries: React, Next.js, Vue 3, Svelte, Tailwind CSS
+
+State Management: Redux, Zustand, Pinia, Context API
+
+Testing: Jest, Cypress, React Testing Library
+
+APIs: REST, GraphQL
+
+Build/Tools: Webpack, Vite, npm/yarn, Git/GitHub
+
+Performance/Optimization: Lighthouse, Core Web Vitals, lazy loading, code splitting
+
+Your chatbot should suggest action-oriented, result-focused bullet points. Examples:
+
+Front-End Developer Key Points:
+
+Developed responsive web applications using React and Tailwind, improving load speed by 30%.
+
+Integrated GraphQL and REST APIs to deliver dynamic content efficiently.
+
+Optimized website performance using lazy loading, code splitting, and caching strategies.
+
+Collaborated with UX/UI designers to implement a consistent design system across multiple projects.
+
+Implemented unit and integration tests using Jest and Cypress to ensure code quality.
+
+Mentored junior developers, providing code reviews and best practice guidance.
+
+Migrated legacy projects to modern frameworks (React 18 / Next.js), improving maintainability.
+
+Built Progressive Web Apps (PWAs) to enhance offline accessibility and mobile experience.

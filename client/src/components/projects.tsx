@@ -6,13 +6,13 @@ import reactImg from "@assets/generated_images/react_application_interface.png";
 
 const projects = [
   {
-    id: "rbi-dashboard",
-    title: "Restaurant Brands International Dashboard",
-    category: "Analytics Platform",
-    description: "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
-    image: dashboardImg,
-    tags: ["React.js", "TypeScript", "Real-time Data"],
-    year: "Jan 2024 - June 2024",
+    id: "probeme-ai",
+    title: "Probeme AI",
+    category: "AI Integration",
+    description: "Professional chatbot platform helping developers optimize resumes and advance their careers with AI-powered technical skills assessment and personalized recommendations.",
+    image: reactImg,
+    tags: ["React.js", "AI APIs", "TypeScript"],
+    year: "2023 - 2024",
     featured: true,
   },
   {
@@ -20,8 +20,18 @@ const projects = [
     title: "Raven Dashboard",
     category: "Data Visualization SaaS",
     description: "Enterprise data visualization platform processing survey data from Confirmit and Decipher, delivering real-time insights through interactive charts.",
-    image: reactImg,
+    image: dashboardImg,
     tags: ["React.js", "Highcharts", "NestJS"],
+    featured: true,
+  },
+  {
+    id: "rbi-dashboard",
+    title: "Restaurant Brands International Dashboard",
+    category: "Analytics Platform",
+    description: "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
+    image: reactImg,
+    tags: ["React.js", "TypeScript", "Real-time Data"],
+    year: "Jan 2024 - June 2024",
     featured: true,
   },
   {
