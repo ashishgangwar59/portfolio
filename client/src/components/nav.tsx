@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -18,14 +18,14 @@ export default function Nav() {
       transition={{ duration: 0.5 }}
       className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 bg-background/80 backdrop-blur-md border-b border-border/30"
     >
-      <Link href="/">
-        <motion.a 
-          className="text-lg font-bold tracking-wider bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+      <Link to="/">
+        <motion.div 
+          className="text-lg font-bold tracking-wider bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer"
           data-testid="link-home"
           whileHover={{ scale: 1.05 }}
         >
           AK
-        </motion.a>
+        </motion.div>
       </Link>
 
       <div className="hidden md:flex gap-8">

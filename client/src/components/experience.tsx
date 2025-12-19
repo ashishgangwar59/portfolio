@@ -46,53 +46,66 @@ export default function Experience() {
 
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
-                  <motion.h3 
+                  <motion.h3
                     className="text-2xl font-light text-foreground mb-2"
                     whileHover={{ x: 5 }}
                   >
                     Senior Frontend Developer
                   </motion.h3>
-                  <motion.p 
+                  <motion.p
                     className="text-lg text-primary font-medium"
                     whileHover={{ color: "#7c3aed" }}
                   >
                     E2E Research Pvt Ltd
                   </motion.p>
                 </div>
-                <span className="text-muted-foreground mt-2 md:mt-0">Present</span>
+                <span className="text-muted-foreground mt-2 md:mt-0">
+                  Present
+                </span>
               </div>
 
-              <motion.p 
+              <motion.p
                 className="text-muted-foreground leading-relaxed mb-6"
                 initial={{ opacity: 0.7 }}
                 whileHover={{ opacity: 1 }}
               >
-                Worked on multiple projects developed from scratch with end-to-end responsibility of frontend and backend architecture and development workflows under agile methodology.
+                Worked on multiple projects developed from scratch with
+                end-to-end responsibility of frontend and backend architecture
+                and development workflows under agile methodology.
               </motion.p>
 
               <div className="space-y-3 mb-6">
                 {[
-                  "Led end-to-end frontend and backend development on multiple enterprise projects",
-                  "Involved in developing, building logic and training juniors on live projects to accomplish business use cases",
-                  "Worked closely with the COO of the company to discover scenarios and deliver expected results",
-                  "Received two awards within 6 months for consistent performance and delivery excellence"
+                  "Led end-to-end frontend and backend development for multiple enterprise projects built from scratch, owning architecture, implementation, and delivery within an agile environment.",
+                  "Designed scalable application logic and mentored junior developers through hands-on guidance during live project execution.",
+                  "Collaborated closely with the COO to understand business requirements, define use cases, and deliver solutions aligned with organizational goals",
+                  "Recognized with two performance awards within six months for consistent delivery and technical excellence.",
                 ].map((point, idx) => (
-                  <motion.p 
+                  <motion.p
                     key={idx}
                     className="text-muted-foreground flex gap-3 hover:text-foreground transition-colors"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                   >
-                    <span className="text-primary mt-1 flex-shrink-0">→</span>
+                    <span className="text-primary mt-1 ">→</span>
                     {point}
                   </motion.p>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {["ReactJS", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "NestJS", "Docker", "Nginx"].map((skill, idx) => (
-                  <motion.span 
+                {[
+                  "ReactJS",
+                  "NextJS",
+                  "NodeJS",
+                  "ExpressJS",
+                  "MongoDB",
+                  "NestJS",
+                  "Docker",
+                  "Nginx",
+                ].map((skill, idx) => (
+                  <motion.span
                     key={skill}
                     className="text-sm text-muted-foreground border border-border rounded-full px-4 py-1 hover:border-primary hover:text-primary transition-colors"
                     data-testid={`skill-work-${skill.toLowerCase()}`}

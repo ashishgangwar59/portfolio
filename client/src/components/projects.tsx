@@ -3,14 +3,20 @@ import { Card } from "@/components/ui/card";
 import ProjectCard from "./project-card";
 import dashboardImg from "@assets/generated_images/dashboard_ui_mockup.png";
 import reactImg from "@assets/generated_images/react_application_interface.png";
+import probeMe from "@assets/generated_images/react_application_interface_1.png";
+import research from "@assets/generated_images/react_application_interface_2.png";
+import raven from "@assets/generated_images/react_application_interface_3.png";
+import rbi from "@assets/generated_images/react_application_interface_4.png";
+import hfs from "@assets/generated_images/react_application_interface_5.png";
 
 const projects = [
   {
     id: "probeme-ai",
     title: "Probeme AI",
     category: "AI Integration",
-    description: "Professional chatbot platform helping developers optimize resumes and advance their careers with AI-powered technical skills assessment and personalized recommendations.",
-    image: reactImg,
+    description:
+      "Professional chatbot platform helping developers optimize resumes and advance their careers with AI-powered technical skills assessment and personalized recommendations.",
+    image: probeMe,
     tags: ["React.js", "AI APIs", "TypeScript"],
     year: "2023 - 2024",
     featured: true,
@@ -19,8 +25,9 @@ const projects = [
     id: "research-gearbox",
     title: "Research Gearbox - Video Analyzer",
     category: "Data Analysis Tool",
-    description: "Fully customized video analysis tool with complex mathematical computations for data capture and real-time dashboard analytics. Secured with admin/user login and JWT token authentication.",
-    image: dashboardImg,
+    description:
+      "A fully customized video analysis tool featuring complex mathematical computations for data capture and real-time dashboard analytics, secured with role-based admin/user access and JWT authentication.",
+    image: research,
     tags: ["React.js", "Video Processing", "Express.js"],
     year: "2022 - 2023",
     featured: true,
@@ -29,8 +36,9 @@ const projects = [
     id: "raven-dashboard",
     title: "Raven Dashboard",
     category: "Data Visualization SaaS",
-    description: "Enterprise data visualization platform processing survey data from Confirmit and Decipher, delivering real-time insights through interactive charts.",
-    image: reactImg,
+    description:
+      "Enterprise data visualization platform processing survey data from Confirmit and Decipher, delivering real-time insights through interactive charts.",
+    image: raven,
     tags: ["React.js", "Highcharts", "NestJS"],
     featured: true,
   },
@@ -38,8 +46,9 @@ const projects = [
     id: "rbi-dashboard",
     title: "Restaurant Brands International Dashboard",
     category: "Analytics Platform",
-    description: "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
-    image: dashboardImg,
+    description:
+      "Comprehensive analytics tool for managing sales, marketing, and supply chain operations across Burger King, Tim Hortons, and Popeyes.",
+    image: rbi,
     tags: ["React.js", "TypeScript", "Real-time Data"],
     year: "Jan 2024 - June 2024",
     featured: true,
@@ -48,15 +57,19 @@ const projects = [
     id: "hfs-dashboard",
     title: "HFS Dashboard",
     category: "Performance Analytics",
-    description: "High-Frequency Statistics dashboard with predictive analytics, live data streams, and advanced performance tracking for enterprise operations.",
-    image: reactImg,
+    description:
+      "High-Frequency Statistics dashboard with predictive analytics, live data streams, and advanced performance tracking for enterprise operations.",
+    image: hfs,
     tags: ["React.js", "Node.js", "Highcharts"],
-  }
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 px-6 bg-background relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-32 px-6 bg-background relative overflow-hidden"
+    >
       {/* Animated background shapes */}
       <motion.div
         className="absolute -top-40 right-0 w-80 h-80 bg-gradient-to-br from-primary/15 to-purple-500/15 rounded-full blur-3xl"
@@ -107,8 +120,9 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            A curated selection of projects that showcase my expertise in building scalable, 
-            performant web applications and comprehensive data visualization solutions.
+            A selection of projects where I’ve designed and built scalable,
+            high-performance web applications with rich, data-driven
+            visualizations.
           </motion.p>
         </motion.div>
 

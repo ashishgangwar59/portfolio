@@ -23,7 +23,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 bg-background border-t border-border relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-32 px-6 bg-background border-t border-border relative overflow-hidden"
+    >
       {/* Background decoration */}
       <motion.div
         className="absolute -top-40 left-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 via-primary/10 to-transparent rounded-full blur-3xl -translate-x-1/2"
@@ -38,7 +41,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-5xl md:text-6xl font-light tracking-tight mb-12"
             variants={itemVariants}
           >
@@ -48,11 +51,14 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-16 mb-20">
             <motion.div variants={itemVariants}>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm currently available for freelance work and open to new opportunities. Whether you need a frontend developer for your next project or want to collaborate on something creative, I'd love to hear from you.
+                I’m available for freelance work and open to new opportunities.
+                If you need a frontend developer to build scalable, high-quality
+                experiences—or want to collaborate on something impactful—I’d
+                love to talk.
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="space-y-6"
               variants={containerVariants}
               initial="hidden"
@@ -73,7 +79,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-primary" />
                 </motion.div>
                 <span className="text-lg text-foreground group-hover:text-primary transition-colors">
-                  ashishkumar@example.com
+                  ak915066@gmail.com
                 </span>
               </motion.a>
 
@@ -115,13 +121,13 @@ export default function Contact() {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="border-t border-border pt-8 text-center text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            © 2024 Ashish Kumar. Designed and developed with care.
+            © 2026 Ashish Kumar. Designed and developed with care.
           </motion.div>
         </motion.div>
       </div>

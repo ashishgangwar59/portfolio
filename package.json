@@ -1,15 +1,18 @@
 {
   "name": "rest-express",
+  "homepage": "https://ashishgangwar59.github.io/portfolio/",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "dev:client": "vite dev --port 5000",
-    "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "tsx script/build.ts",
+    "dev": "vite dev --port 5341",
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "vite build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -65,6 +68,7 @@
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.66.0",
     "react-resizable-panels": "^2.1.9",
+    "react-router-dom": "^7.11.0",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
@@ -94,6 +98,7 @@
     "autoprefixer": "^10.4.21",
     "drizzle-kit": "^0.31.4",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.20.5",
